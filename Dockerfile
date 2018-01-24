@@ -18,9 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /ethminer
 
-RUN echo '/ethminer/bin/ethminer -RH -U -S $POOL1 -FS $POOL2 -O $ETH_ACCT.$WORKER --cuda-parallel-hash $CUDAPH --api-port 3333' > start.sh
-
 EXPOSE 3333/tcp
 
-ENTRYPOINT [ "/ethminer/bin/ethminer" ]
+ENTRYPOINT [ "/ethminer/ethminer" ]
 CMD [ "-RH", "-U", "-S", "pool_1_url", "-FS", "pool_2_url", "-O", "eth_address" ]
