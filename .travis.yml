@@ -1,0 +1,20 @@
+sudo: required
+
+language: bash
+
+dist: xenial
+
+services:
+  - docker
+
+script:
+  - TAG="0.13.0-cuda9.0"
+  - TAGL="latest-cuda9.0"
+  - CONT_NAME="ethminer"
+  - REPO="cryptojunkies"
+  - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+  - docker build -t $REPO/$CONT_NAME:$TAGL .
+  - docker images
+  - docker tag $REPO/$CONT_NAME $REPO/$CONT_NAME:$TAG
+  - docker push $REPO/$CONT_NAME:$TAG
+  - docker push $REPO/$CONT_NAME:$TAGL
