@@ -1,4 +1,4 @@
-# nv-docker-ethminer [![Build Status](https://travis-ci.org/CultClassik/nv-docker-ethminer.svg?branch=master)](https://travis-ci.org/CultClassik/nv-docker-ethminer)
+# nv-docker-ethminer [![Build Status](https://travis-ci.org/CryptoJunkies/nv-docker-ethminer.svg?branch=master)](https://travis-ci.org/CryptoJunkies/nv-docker-ethminer)
 [Image on Docker Hub](https://hub.docker.com/r/cryptojunkies/ethminer/)
 
 Dockerfile to build cryptojunkies/ethminer GPU container.
