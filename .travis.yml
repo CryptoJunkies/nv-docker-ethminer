@@ -15,6 +15,6 @@ script:
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
   - docker build -t $REPO/$CONT_NAME:$TAGL .
   - docker images
-  - docker tag $REPO/$CONT_NAME $REPO/$CONT_NAME:$TAG
+  - docker tag $REPO/$CONT_NAME:$TAGL $REPO/$CONT_NAME:$TAG
   - docker push $REPO/$CONT_NAME:$TAG
   - docker push $REPO/$CONT_NAME:$TAGL
