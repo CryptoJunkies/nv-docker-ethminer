@@ -1,5 +1,5 @@
 ARG runtime="nvidia"
-FROM nvidia/cuda:9.0-runtime-ubuntu16.04
+FROM nvidia/cuda:9.2-runtime-ubuntu18.04
 
 LABEL "maintainer"="Chris Diehl <cultclassik@gmail.com>"
 
@@ -21,4 +21,4 @@ WORKDIR /ethminer
 EXPOSE 3333/tcp
 
 ENTRYPOINT [ "/ethminer/ethminer" ]
-CMD [ "-RH", "-U", "-S", "pool_1_url", "-FS", "pool_2_url", "-O", "eth_address" ]
+CMD [ "-R", "-U", "-P", "pool_1_url" ]

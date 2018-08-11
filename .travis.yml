@@ -8,8 +8,8 @@ services:
   - docker
 
 script:
-  - TAG="0.15.0-cuda9.0"
-  - TAGL="latest-cuda9.0"
+  - TAG="0.15.0-cuda9.2"
+  - TAGL="latest-cuda9.2"
   - CONT_NAME="ethminer"
   - REPO="cryptojunkies"
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
