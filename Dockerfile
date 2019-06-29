@@ -6,7 +6,7 @@ LABEL "maintainer"="Chris Diehl <cultclassik@gmail.com>"
 # NVidia required
 ENV NVIDIA_VISIBLE_DEVICES=0
 
-ENV EMREL="https://github.com/ethereum-mining/ethminer/releases/download/v0.15.0/ethminer-0.15.0-Linux.tar.gz"
+ENV EMREL="https://github.com/ethereum-mining/ethminer/releases/download/v0.17.1/ethminer-0.17.1-linux-x86_64.tar.gz"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
